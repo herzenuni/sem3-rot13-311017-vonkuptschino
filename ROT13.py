@@ -36,7 +36,7 @@ def inputChekcer(userInput = " ", type = str):
 	while (1):
 		try:
 			inp = type(input(userInput))
-			break
+			break;
 		except ValueError:
 			print("\n\t\t\t\tInput error")
 	return inp
@@ -60,18 +60,18 @@ def en_de_crypt_file():
 	
 #***********************PROGRAMM*******************************
 
-print("\t\t1) encrypt/decrypt file")
-print("\t\t2) encrypt/decrypt string")
-print("\t\t3) exit")
+print("\n\n\t\t\t1) encrypt/decrypt file")
+print("\t\t\t2) encrypt/decrypt string")
+print("\t\t\t3) exit")
 
-while(1):
-	checker = input("\n\t\t\tinput: ")
-	if checker == 1:
-		en_de_crypt_file()
-	elif checker == 2:
-		print(ROT13(inputChekcer("\tInput the string: ",str)))
-	elif checker == 3:
-		exit()
-	else:
-		print("\tInput error. Repeat once again")
-		 
+
+checker = int(input("\n\t\t\tinput: "))
+
+if checker == 1:
+	en_de_crypt_file()
+elif checker == 2:
+	print(ROT13(inputChekcer("\tInput the string: ",str)))
+elif checker == 3:
+	exit()
+else:
+	print("\tInput error. Repeat once again") 

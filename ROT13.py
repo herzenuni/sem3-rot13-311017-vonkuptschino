@@ -64,14 +64,13 @@ print("\n\n\t\t\t1) encrypt/decrypt file")
 print("\t\t\t2) encrypt/decrypt string")
 print("\t\t\t3) exit")
 
-
-checker = int(input("\n\t\t\tinput: "))
-
-if checker == 1:
-	en_de_crypt_file()
-elif checker == 2:
-	print(ROT13(inputChekcer("\tInput the string: ",str)))
-elif checker == 3:
-	exit()
-else:
-	print("\tInput error. Repeat once again") 
+while (1):
+	checker = inputChekcer( """    input: """, str)
+	if checker == "1":
+		en_de_crypt_file()
+	elif checker == "2":
+		print(ROT13(inputChekcer("\tInput the string: ",str)))
+	elif checker == "3":
+		exit()
+	else:
+		print("\tInput error. Repeat once again") 

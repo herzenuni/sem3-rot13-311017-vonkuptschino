@@ -19,10 +19,8 @@ def ROT13(string):
       return ch
 
   return "".join(map(roter, string))
-#ASSERTIONS  
-if __name__ == "__main__":
-	assert(ROT13(ROT13('pythonist wannabe')) == 'pythonist wannabe')  
 
+	
 #EXAMPLES  
 #print('\n',ROT13('sbbone rttfcnz')) #foobar eggspam
 #print('\n',ROT13('Hayrff rkcyvpvgyl fvyraprq')) #Unless explicitly silenced
@@ -59,18 +57,22 @@ def en_de_crypt_file():
 	
 	
 #***********************PROGRAMM*******************************
+ 
+if __name__ == "__main__":
+	import test_ROT13
+	assert test_ROT13.test_vice_versa(ROT13)
+	
+	print("\n\n\t\t\t1) encrypt/decrypt file")
+	print("\t\t\t2) encrypt/decrypt string")
+	print("\t\t\t3) exit")
 
-print("\n\n\t\t\t1) encrypt/decrypt file")
-print("\t\t\t2) encrypt/decrypt string")
-print("\t\t\t3) exit")
-
-while (1):
-	checker = inputChekcer( """    input: """, str)
-	if checker == "1":
-		en_de_crypt_file()
-	elif checker == "2":
-		print(ROT13(inputChekcer("\tInput the string: ",str)))
-	elif checker == "3":
-		exit()
-	else:
-		print("\tInput error. Repeat once again") 
+	while (1):
+		checker = inputChekcer( """    input: """, str)
+		if checker == "1":
+			en_de_crypt_file()
+		elif checker == "2":
+			print(ROT13(inputChekcer("\tInput the string: ",str)))
+		elif checker == "3":
+			exit()
+		else:
+			print("\tInput error. Repeat once again") 
